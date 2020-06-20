@@ -15,17 +15,17 @@ import com.github.barteksc.pdfviewer.PDFView;
 public class MainActivity extends AppCompatActivity
 {
     PDFView pdf;
-    Intent intn;
+    Intent Fintent;
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        pdf = findViewById(R.id.pdfView);
-        intn = getIntent();
+        pdf = findViewById(R.id.pdf1);
+        Fintent = getIntent();
 
-        if (intn.getAction() == ( Intent.ACTION_VIEW )) {
-            pdf.fromUri(intn.getData()).load();
+        if (Fintent.getAction() == ( Intent.ACTION_VIEW )) {
+            pdf.fromUri(Fintent.getData()).load();
         }
 
     }
